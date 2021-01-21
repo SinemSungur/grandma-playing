@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.07s;
+}
+
+#container {
+  height: 100vh;
+  width: 100%;
+  background-image: url(images/grandmaplaying.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  font-family: "Architects Daughter", cursive;
+  cursor: url("images/cursor.png"), auto;
+}
+
+.keys {
+  margin: 0 auto;
+  align-content: center;
+  display: grid;
+  height: auto;
+  width: 90%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 100px;
+  column-gap: 20px;
+  position: relative;
+}
+.key {
+  background-color: rgba(0, 0, 0, 0.404);
+  color: rgba(255, 255, 255, 0.726);
+  text-align: center;
+  border: 4px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffeb00d9;
+  box-shadow: 0 0 10px #ffeb00d9;
+}
+kbd {
+  font-size: 35px;
+}
+span.sound {
+  display: block;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: #ffeb00d9;
+  font-size: 12px;
+}
+.logo {
+  position: absolute;
+  width: 200px;
+  top: 10px;
+  left: 5%;
+}
+.content {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ffea00c5;
+}
+img {
+  width: 25%;
+  background-color: #ffea00a6;
+}
+
+@media screen and (max-width: 425px) {
+  section#container {
+    background-size: cover;
+    background-position-x: 28%;
+    overflow: hidden;
+  }
+  .keys {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    column-gap: 10px;
+  }
+  .key {
+    margin-bottom: 10px;
+  }
+  .content {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  section#container {
+    background-position-x: 28%;
+  }
+  .keys {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px);
+    column-gap: 10px;
+  }
+  .key {
+    margin-bottom: 10px;
+  }
+  img {
+    width: 35%;
+  }
+  .content {
+    left: 17%;
+    top: 3%;
+  }
+}
+@media screen and (min-width: 1024px){
+  .content{
+    font-size: 20px;
+    top: 14%;
+    left: 5%;
+  }
+  img{
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1440px){
+  img{
+    width: 60%;
+  }
+  .content{
+    font-size: 38px;
+    left: 5%;
+    top: 16%;
+  }
+}
+
